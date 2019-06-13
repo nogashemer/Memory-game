@@ -1,20 +1,17 @@
 
-let playerNameinput = document.getElementById("playerNameInput").value;
-let deckInput = document.getElementById("deckInput").value;
+let modalStartBtn = document.getElementById("modalStartBtn");
+let playerNameHtml = document.getElementById("playerNameInput");
+let deckHtml = document.getElementById("deckInput");
 let currentPlayer;
 let currentGame;
 
 function newGame() {
+    let playerNameInput = playerNameHtml.value;
 
-    if (players.playerNameInput) {
-        currentPlayer = players.playerNameInput;
-    } else {
-        let newPlayer = playerNameinput;
-        Players.push = newPlayer;
-        Players.newPlayer = new player();
-        currentPlayer = player.newPlayer;
-    }
+    Players.setCurrentPlayer(playerNameInput);
 
     currentGame = new Game(currentPlayer);
     currentGame.layCards();
-}
+};
+
+modalStartBtn.addEventListener("click", newGame);
