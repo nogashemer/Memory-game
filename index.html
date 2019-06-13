@@ -55,18 +55,25 @@
                         <input type="text" class="form-control" id="playerNameInput">
                     </div>
                     <div class="form-group">
-                        <select class="custom-select" id="deckInput">
-                            <option selected>Deck</option>
-                            <option value="Dogs">Dogs</option>
-                            <option value="Cats">Cats</option>
-                            <option value="Cats">Birds</option>
-                            <option value="Surprise">Surprise me</option>
-                        </select>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <label class="input-group-text" for="deckInput">Deck</label>
+                            </div>
+                            <select class="custom-select" id="deckInput">
+                                <option selected>Deck</option>
+                                <option value="Dogs">Dogs</option>
+                                <option value="Cats">Cats</option>
+                                <option value="Cats">Birds</option>
+                                <option value="Surprise">Surprise me</option>
+                            </select>
+                        </div>
+
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" id="modalStartBtn">Start game</button>
+                    <button type="button" class="btn btn-primary" id="modalStartBtn" data-dismiss="modal">Start
+                        game</button>
                 </div>
             </div>
         </div>
@@ -74,8 +81,32 @@
 
 
     <div class="container rounded shadow p-3">
-        <div class="row cards-container">
-            <div class="card" id="card1">
+        <div class="row cards-container" id="cardsContainer">
+
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script src="./Scripts/Elements/Card.js"></script>
+    <script src="./Scripts/Elements/Player.js"></script>
+    <script src="./Scripts/Elements/Deck.js"></script>
+    <script src="./Scripts/Elements/Game.js"></script>
+    <script src="./Scripts/Main.js"></script>
+</body>
+
+</html>
+
+<!--  <div class="card" id="card1">
                 <img class="card-img-top">
             </div>
             <div class="card" id="card2">
@@ -112,26 +143,4 @@
                 <img class="card-img-top">
             </div>
 
-
-
-        </div>
-    </div>
-
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-
-    <script src="./Scripts/Elements/Card.js"></script>
-    <script src="./Scripts/Elements/Player.js"></script>
-    <script src="./Scripts/Elements/Game.js"></script>
-    <script src="./Scripts/Main.js"></script>
-</body>
-
-</html>
+ -->

@@ -1,9 +1,10 @@
 class Card {
-    constructor(htmlCard, imgPath, isPaired = false, isOpen = false) {
+    constructor(pairId, imagePath, htmlCard, isPaired = false, isRevealed = false) {
+        this.pairId = pairId;
+        this.imagePath = imagePath;
         this.htmlCard = htmlCard;
-        this.imgPath = imgPath;
         this.isPaired = isPaired;
-        this.isOpen = isOpen;
+        this.isRevealed = isRevealed;
     }
 
     injectImg() {

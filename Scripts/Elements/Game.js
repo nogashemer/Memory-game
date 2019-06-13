@@ -1,11 +1,10 @@
 class Game {
-
-    constructor(player, deck) {
-        this.player = player;
-        this.deck = deck;
+    constructor(currentPlayer, deckInput) {
+        this.player = currentPlayer;
+        this.deck = currentDeck;
     };
 
-    layCards(deck) {
+    layCards() {
 
     };
 
