@@ -11,7 +11,7 @@ body {
 }
 
 nav.navbar {
-    background: #162b38	;
+    background: #162b38;
     margin: auto;
     width: 100%;
     max-width: 768px;
@@ -24,7 +24,6 @@ nav.navbar {
     flex-direction: column;
 }
 
-
 .navbar-brand {
     color: #9e9e9e;
     padding: 0;
@@ -32,7 +31,7 @@ nav.navbar {
     line-height: 1rem;
 }
 
-.navbar-slogen{
+.navbar-slogen {
     font-size: 1rem;
     line-height: 1rem;
     margin: 0;
@@ -60,11 +59,9 @@ nav.navbar {
     background-color: #a55028;
 }
 
-.bg-gray {
-    background: #fde279;
+.dropdown-menu {
+    text-align: center;
 }
-
-
 
 .display-none {
     display: none;
@@ -84,7 +81,6 @@ nav.navbar {
     overflow: hidden;
 }
 
-
 .cards-container {
     flex-wrap: wrap;
     justify-content: center;
@@ -98,13 +94,12 @@ nav.navbar {
 
 @media only screen and (min-width: 768px) {
     .card {
-    margin: 10px;
-     max-width: 150px;
-     height: auto;
+        margin: 10px;
+        max-width: 150px;
+        height: auto;
     }
-
     .cards-container {
         margin: -1vw;
         height: 100%;
     }
-  }
+}

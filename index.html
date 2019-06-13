@@ -18,27 +18,50 @@
     <nav class="navbar navbar-expand-lg rounded shadow p-3">
         <img src="./images/logo1.png" class="logo" alt="logo">
         <div class="navbar-title">
-                <a class="navbar-brand" href="./index.html">Memory Cards</a>
-                <p  class="navbar-slogen">a memory game.</p>
+            <a class="navbar-brand" href="./index.html">Memory Cards</a>
+            <p class="navbar-slogen">a memory game.</p>
         </div>
-        
-        <div class="nav-item dropdown dropleft">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">New Game</a>
-                    <a class="dropdown-item" href="#">Scores</a>
-                    <a class="dropdown-item" href="#">About</a>
-                </div>
-            </div>
 
+        <div class="nav-item dropdown dropleft">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <button type="button" class="btn" data-toggle="modal" data-target="#Modal">New Game</button>
+                <a class="dropdown-item" href="#">Scores</a>
+                <a class="dropdown-item" href="#">About</a>
+            </div>
+        </div>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a href="./index.html"><button type="button" class="btn" id="start!">Start!</button></a>
+                <button type="button" class="btn" id="start!" data-toggle="modal" data-target="#Modal">Start!</button>
             </div>
         </div>
     </nav>
+
+
+    <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <div class="container rounded shadow p-3">
         <div class="row cards-container">
             <div class="card" id="card1">
@@ -93,7 +116,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+
+    <!-- <script src="./Scripts/Elements/Card.js"></script>
+    <script src="./Scripts/Elements/Player.js"></script>
+    <script src="./Scripts/Elements/Game.js"></script>
+    <script src="./Scripts/Main.js"></script> -->
 </body>
 
 </html>

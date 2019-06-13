@@ -1,26 +1,16 @@
 class Card {
-    constructor(imgPath, isPaired = false) {
+    constructor(htmlCard, imgPath, isPaired = false, isOpen = false) {
+        this.htmlCard = htmlCard;
         this.imgPath = imgPath;
         this.isPaired = isPaired;
+        this.isOpen = isOpen;
     }
 
-    whenClickedfirst() {
+    injectImg() {
 
     };
 
-    whenClickedSeconed() {
-
-    };
-
-    checkIfPair() {
-
-    };
-
-    notPair() {
-
-    };
-
-    yesPair() {
+    toggleCard() {
 
     };
 
@@ -31,5 +21,6 @@ class Card {
     whenClickedSeconed() {
 
     };
+
 };
 
