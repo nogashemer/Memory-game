@@ -1,7 +1,7 @@
 class Deck {
     constructor(type) {
         this.type = type;
-        this.Cards = [
+        this.deckCards = [
             new Card("a", `/images/Decks/${this.type}/1.jpg`),
             new Card("a", `/images/Decks/${this.type}/1.jpg`),
             new Card("b", `/images/Decks/${this.type}/2.jpg`),

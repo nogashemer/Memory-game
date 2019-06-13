@@ -10,17 +10,18 @@ const DOM_RELATED = {
     deckHtml: document.getElementById("deckInput"),
 
     setHtmlCards: function () {
-        currentDeck.Cards.forEach(function (element) {
-            let newHtmlImage = document.createElement("img");
-            newHtmlImage.id = `cardImage${currentDeck.Cards.indexOf(element) + 1}`;
-            newHtmlImage.className = "card-img-top";
-            newHtmlImage.src = `${element.imagePath}`;
+        currentDeck.deckCards.forEach(function (element) {
+            // let newHtmlImage = document.createElement("img");
+            // newHtmlImage.id = `cardImage${currentDeck.Cards.indexOf(element) + 1}`;
+            // newHtmlImage.className = "card-img-top";
+            // newHtmlImage.src = `${element.imagePath}`;
 
             let newHtmlCard = document.createElement("div");
-            newHtmlCard.id = `card${currentDeck.Cards.indexOf(element) + 1}`;
+            newHtmlCard.id = `card${currentDeck.deckCards.indexOf(element) + 1}`;
             newHtmlCard.className = "card";
+            newHtmlCard.style = (`background-image: url('${element.imagePath}')`);
 
-            newHtmlCard.appendChild(newHtmlImage);
+            // newHtmlCard.appendChild(newHtmlImage);
             document.getElementById("cardsContainer").appendChild(newHtmlCard);
         });
     }

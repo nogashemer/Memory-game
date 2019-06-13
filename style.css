@@ -95,6 +95,7 @@ nav.navbar {
     width: 28%;
     height: 75px;
     background-size: cover;
+    background-origin: content-box;
 }
 
 @media only screen and (min-width: 768px) {
