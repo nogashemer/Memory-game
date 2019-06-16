@@ -1,43 +1,79 @@
 class Card {
-    constructor(pairId, imagePath, htmlCard, isPaired = false, isRevealed = false) {
-        this.pairId = pairId;
+    constructor(imagePath, htmlCardId, htmlCard, isPaired = false, isRevealed = false) {
         this.imagePath = imagePath;
+        this.htmlCardId = htmlCardId;
         this.htmlCard = htmlCard;
         this.isPaired = isPaired;
         this.isRevealed = isRevealed;
-    }
-
-    injectImg() {
-
     };
 
-    toggleCard() {
-
+    revealCard() {
+        DOM_RELATED.currentHtmlCard.style = (`background-image: url(${currentCard.imagePath})`);
+        currentCard.isRevealed = "true";
     };
 
-    whenClickedfirst() {
-
+    concealCards() {
+        for (i = 0; i < 2; i++) {
+            let cardToConceal = currentGame.currentPair[i];
+            cardToConceal.htmlCard.style = ("");
+            cardToConceal.isRevealed = "false";
+            currentGame.numOfRevealedCards--;
+        };
+        currentGame.currentPair = ["", ""];
+        currentGame.eventPause = false;
     };
 
-    whenClickedSeconed() {
+    whenClicked(orderClicked) {
+        if (currentCard.isRevealed == "false") {
+            currentCard.revealCard();
+            currentGame.numOfRevealedCards++;
+            currentGame.currentPair[orderClicked] = currentCard;
+            if (orderClicked == 1) {
+                if (currentGame.checkIfPair()) {
+                    for (i = 0; i < 2; i++) {
+                        let cardToMarkPaired = currentGame.currentPair[i];
+                        cardToMarkPaired.isPaired = true;
+                        cardToMarkPaired.htmlCard.removeEventListener("Click", Cards.whenSomeCardIsClicked);
+                    };
+                    currentGame.numOfPairedPairs++;
+                    (currentGame.numOfPairedPairs == 6) ? currentGame.win() : currentGame.currentPair = ["", ""];
+                } else {
+                    currentGame.eventPause = true;
+                    setTimeout(currentCard.concealCards, 3000);
+                };
+            }
 
+        }
     };
 
 };
 
+let Cards = {
 
-let Cards =
-    [
-        new Card("a", `/images/Decks/${this.type}/1.jpg`),
-        new Card("a", `/images/Decks/${this.type}/1.jpg`),
-        new Card("b", `/images/Decks/${this.type}/2.jpg`),
-        new Card("b", `/images/Decks/${this.type}/2.jpg`),
-        new Card("c", `/images/Decks/${this.type}/3.jpg`),
-        new Card("c", `/images/Decks/${this.type}/3.jpg`),
-        new Card("d", `/images/Decks/${this.type}/4.jpg`),
-        new Card("d", `/images/Decks/${this.type}/4.jpg`),
-        new Card("e", `/images/Decks/${this.type}/5.jpg`),
-        new Card("e", `/images/Decks/${this.type}/5.jpg`),
-        new Card("f", `/images/Decks/${this.type}/6.jpg`),
-        new Card("f", `/images/Decks/${this.type}/6.jpg`)];
+    findCardByHtmlCard: function (htmlCard) {
+        return Decks.deckCards[`${htmlCard}`];
+    },
+
+    setCurrentCard: function (htmlCurrentCardId) {
+        for (i = 0; i < currentDeck.deckCards.length; i++) {
+            if (currentDeck.deckCards[i].htmlCardId == htmlCurrentCardId) {
+                return currentCard = currentDeck.deckCards[i];
+            };
+        };
+    },
+
+    whenSomeCardIsClicked: function (e) {
+        if (!currentGame.eventPause) {
+            DOM_RELATED.currentHtmlCard = e.target;
+            Cards.setCurrentCard(DOM_RELATED.currentHtmlCard.id);
+            (currentGame.numOfRevealedCards % 2 == 0) ? currentCard.whenClicked(0) : currentCard.whenClicked(1);
+        }
+
+    }
+
+}
+
+
+
+
 

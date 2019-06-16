@@ -18,6 +18,11 @@ nav.navbar {
     color: #6e6e6e;
 }
 
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
 .navbar-title {
     text-align: left;
     display: flex;
@@ -41,13 +46,8 @@ nav.navbar {
     color: #6e6e6e;
 }
 
-.navbar .navbar-collapse {
-    justify-content: flex-end;
-}
-
 #start {
-    max-width: 768px;
-    margin: auto;
+    /* NEEDED FOR FOCUS. DO NOT REMOVE EVEN THOUGH EMPTY */
 }
 
 .btn {
@@ -94,8 +94,8 @@ nav.navbar {
     margin: 2vw;
     width: 28%;
     height: 75px;
+    background-image: url('/images/Back.jpg');
     background-size: cover;
-    background-origin: content-box;
 }
 
 @media only screen and (min-width: 768px) {
