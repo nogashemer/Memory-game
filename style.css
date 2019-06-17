@@ -94,7 +94,7 @@ nav.navbar {
     margin: 2vw;
     width: 28%;
     height: 75px;
-    background-image: url('/images/Back.jpg');
+    background-image: url('./images/Back.jpg');
     background-size: cover;
 }
 

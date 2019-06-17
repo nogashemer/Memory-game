@@ -24,7 +24,7 @@ const DOM_RELATED = {
             element.htmlCardId = newHtmlCard.id;
             element.htmlCard = newHtmlCard;
             newHtmlCard.className = "card";
-            newHtmlCard.style = (`background-image: url('/images/back.jpg')`);
+            newHtmlCard.style = (`background-image: url('./images/back.jpg')`);
             element.isRevealed = "false";
             DOM_RELATED.cardsContainerHtml.appendChild(newHtmlCard);
             newHtmlCard.addEventListener("click", Cards.whenSomeCardIsClicked);
@@ -38,7 +38,7 @@ const DOM_RELATED = {
     showWinAlert() {
         DOM_RELATED.cardsContainerHtml.innerHTML = `<div class="alert alert-success" role="alert" style="height: fit-content;">
             <h4 class="alert-heading">You Win!</h4>
-            <p>Well done ${currentPlayer.name}. you have played ${currentPlayer.gamesPlayed} times so far. this time it took you only ${currentGame.duration} secondes and ${currentGame.numOfFailedPairs} wrong guesses.</p>
+            <p>Well done ${currentPlayer.name}. you have played ${currentPlayer.gamesPlayed} times this session. this time it took you only ${currentGame.duration} secondes and ${currentGame.numOfFailedPairs} wrong guesses.</p>
         </div>`
     },
 

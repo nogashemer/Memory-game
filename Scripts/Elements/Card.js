@@ -39,7 +39,7 @@ class Card {
                     (currentGame.numOfPairedPairs == 6) ? currentGame.win() : currentGame.currentPair = ["", ""];
                 } else {
                     currentGame.eventPause = true;
-                    setTimeout(currentCard.concealCards, 3000);
+                    setTimeout(currentCard.concealCards, 1500);
                 };
             }
 

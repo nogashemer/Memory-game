@@ -2,18 +2,18 @@ class Deck {
     constructor(type) {
         this.type = type;
         this.deckCards = [
-            new Card(`/images/Decks/${this.type}/1.jpg`),
-            new Card(`/images/Decks/${this.type}/1.jpg`),
-            new Card(`/images/Decks/${this.type}/2.jpg`),
-            new Card(`/images/Decks/${this.type}/2.jpg`),
-            new Card(`/images/Decks/${this.type}/3.jpg`),
-            new Card(`/images/Decks/${this.type}/3.jpg`),
-            new Card(`/images/Decks/${this.type}/4.jpg`),
-            new Card(`/images/Decks/${this.type}/4.jpg`),
-            new Card(`/images/Decks/${this.type}/5.jpg`),
-            new Card(`/images/Decks/${this.type}/5.jpg`),
-            new Card(`/images/Decks/${this.type}/6.jpg`),
-            new Card(`/images/Decks/${this.type}/6.jpg`)]
+            new Card(`./images/Decks/${this.type}/1.jpg`),
+            new Card(`./images/Decks/${this.type}/1.jpg`),
+            new Card(`./images/Decks/${this.type}/2.jpg`),
+            new Card(`./images/Decks/${this.type}/2.jpg`),
+            new Card(`./images/Decks/${this.type}/3.jpg`),
+            new Card(`./images/Decks/${this.type}/3.jpg`),
+            new Card(`./images/Decks/${this.type}/4.jpg`),
+            new Card(`./images/Decks/${this.type}/4.jpg`),
+            new Card(`./images/Decks/${this.type}/5.jpg`),
+            new Card(`./images/Decks/${this.type}/5.jpg`),
+            new Card(`./images/Decks/${this.type}/6.jpg`),
+            new Card(`./images/Decks/${this.type}/6.jpg`)]
     }
 
 };
